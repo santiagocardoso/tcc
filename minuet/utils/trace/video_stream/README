@@ -1,0 +1,6 @@
+Neste diretório deve ser inserido um arquivo de trace de video (.trace) no qual contém informações a respeito do envio de frames para os nós que pertecem ao grupo de proximidade.
+
+Cada linha deste arquivo deve seguir a seguinte estrutura:
+
+
+ID_FRAME   TIPO_FRAME   TAMANHO_FRAME   TOTAL_PACOTES   INSTANTE_DO_FRAME

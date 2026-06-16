@@ -1,0 +1,8 @@
+Neste diretório deve ser inserido o arquivo de trace de eventos (TraceEvents.ev), o qual configura os eventos necessários para a simulação.
+
+O arquivo possui as seguintes informações:
+
+ID_EVENTO TEMPO_INICIO EVENTO_E_FIXO POSICAO_X POSICAO_Y POSICAO_Z DURACAO_EVENTO NODE_EVENT
+
+OBS: No EVENTO_E_FIXO, caso o valor seja 1 significa que o evento é fixo, caso seja 0 significa que o evento é móvel.
+OBS 2: Caso o evento seja móvel (coluna EVENTO_E_FIXO = 0) os valores default das coordenadas da posição devem ser -1.0 -1.0 -1.0 no arquivo. Caso o evento seja fixo (coluna EVENTO_E_FIXO = 1) o valor default da coluna NODE_EVENT será -1.

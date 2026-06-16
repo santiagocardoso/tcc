@@ -1,0 +1,5 @@
+Neste diretório deve ser inserido o arquivo de trace das estações base (TraceBaseStation.bs).
+
+Cada linha deste arquivo corresponde a uma estação base no cenário e deve seguir a seguinte estrutura:
+
+ID_ESTACAO_BASE POSICAO_X POSICAO_Y

@@ -1,0 +1,7 @@
+services:
+  ns3:
+    image: ns3:3.29-dev
+    #user: "1000:1000"
+    volumes:
+      - ./minuet:/root/ns3/ns-allinone-3.29/ns-3.29/src/minuet
+    command: ["tail","-f","/dev/null"]

@@ -1,0 +1,10 @@
+# project  configured on Wed May 31 01:23:14 2023 by
+# waf 2.0.9 (abi 20, python 20711f0 on linux2)
+# using ../../waf configure
+#
+----------------------------------------
+Setting top to
+/root/ns3/ns-allinone-3.29/ns-3.29/src/minuet
+----------------------------------------
+Setting out to
+/root/ns3/ns-allinone-3.29/ns-3.29/src/minuet/build

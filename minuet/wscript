@@ -1,0 +1,78 @@
+# -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+# def options(opt):
+#     pass
+
+# def configure(conf):
+#     conf.check_nonfatal(header_name='stdint.h', define_name='HAVE_STDINT_H')
+
+def build(bld):
+    module = bld.create_ns3_module('minuet', ['core', 'network', 'mobility', 'wifi', 'wave', 'applications', 'csma', 'internet', 'netanim'])
+    module.source = [
+    	'model/minuet.cc',
+    	'model/minuet-detection-layer.cc',
+    	'model/minuet-announcement-layer.cc',
+    	'model/minuet-monitoring-layer.cc',
+        'model/minuet-communication-layer.cc',
+        'model/app-minuet.cc',
+        'helper/minuet-helper.cc',
+        'helper/base-station-helper.cc',
+        'model/minuet-event.cc',
+        'model/minuet-utils.cc',
+        'model/minuet-header.cc',
+        'model/dca.cc',
+        'model/dca-header.cc',
+        'model/dca-utils.cc',
+        'model/minuet-clustering-manager.cc',
+        'model/minuet-base-station.cc',
+        'model/pctt.cc',
+        'model/pctt-header.cc',
+        'model/pctt-utils.cc',
+        'model/pctt-vehicle.cc',
+        'model/social.cc',
+        'model/social-header.cc',
+        'model/social-utils.cc',
+        'model/mcda-utils.cc',
+        'model/icr-utils.cc',
+        ]
+
+    module_test = bld.create_ns3_module_test_library('minuet')
+    module_test.source = [
+        'test/minuet-test-suite.cc',
+        ]
+
+    headers = bld(features='ns3header')
+    headers.module = 'minuet'
+    headers.source = [
+    	'model/minuet.h',
+    	'model/minuet-detection-layer.h',
+        'model/minuet-announcement-layer.h',
+        'model/minuet-monitoring-layer.h',
+        'model/minuet-communication-layer.h',
+        'model/app-minuet.h',
+        'helper/minuet-helper.h',
+        'helper/base-station-helper.h',
+        'model/minuet-event.h',
+        'model/minuet-utils.h',
+	'model/minuet-header.h',
+        'model/dca.h',
+        'model/dca-header.h',
+        'model/dca-utils.h',
+        'model/minuet-clustering-manager.h',
+        'model/minuet-base-station.h',
+        'model/pctt.h',
+        'model/pctt-header.h',
+        'model/pctt-utils.h',
+        'model/pctt-vehicle.h',
+        'model/social.h',
+        'model/social-header.h',
+        'model/social-utils.h',
+        'model/mcda-utils.h',
+        'model/icr-utils.h',
+        ]
+
+    if bld.env.ENABLE_EXAMPLES:
+        bld.recurse('examples')
+
+    # bld.ns3_python_bindings()
+
